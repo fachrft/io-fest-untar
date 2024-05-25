@@ -1,5 +1,5 @@
 import Globe from "../Components/Fragments/Globe";
-import Icon from "../assets/icon/Icon.png";
+import Icon from "../assets/icon/Icon.svg";
 
 const Home = () => {
     return (
@@ -7,7 +7,7 @@ const Home = () => {
             <Globe />
             <div className="flex flex-col px-7 gap-4 lg:px-32">
                 <h1 className="text-xl font-semibold pr-10 lg:text-[40px] lg:leading-tight lg:w-[50vw]">Apa Yang Di Maksud Dengan Emisi Karbon ?</h1>
-                <p className="text-[#8B8B8B] lg:text-[32px] lg:w-[70vw]">
+                <p className="text-[#8B8B8B] lg:text-2xl lg:w-[50vw]">
                     karbon adalah gas yang keluar dari kendaraan dan pabrik, membuat bumi kita semakin panas. Ini seperti selimut tebal yang membuat bumi 'demam'. Kurangi emisi ini supaya bumi kita sejuk dan nyaman untuk semua makhluk hidup.
                 </p>
                 <div className="flex gap-2 items-center lg:gap-6">

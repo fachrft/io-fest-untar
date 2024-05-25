@@ -18,6 +18,8 @@ import gambar10 from '../assets/images/gambar10.jpg';
 import gambar11 from '../assets/images/gambar11.jpg';
 import gambar12 from '../assets/images/gambar12.jpg';
 
+import YoutubeSlide from "../Components/Fragments/YoutubeSlide";
+
 const Berita = () => {
     const [day, setDay] = useState("harian");
 
@@ -64,7 +66,9 @@ const Berita = () => {
                     <GambarBerita image={gambar12} text="Studi: Perubahan Iklim Bis..." />
                 </div>
             )}
-            <div className="bg-hijau"></div>
+            <div className="bg-hijau">
+                <YoutubeSlide/>
+            </div>
         </div>
     );
 };

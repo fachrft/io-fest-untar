@@ -46,12 +46,12 @@ const Navbar = () => {
                         </button>
                     </nav>
                 </div>
-                <div className={`mobile-menu ${isMenuOpen ? 'flex' : 'hidden'} lg:hidden`}>
+                <div className={`mobile-menu ${isMenuOpen ? 'flex' : 'hidden'} lg:hidden pb-4`}>
                     <nav className="flex flex-col gap-4">
-                        <a href="#">Home</a>
-                        <a href="#">Berita</a>
-                        <a href="#">Data</a>
-                        <a href="#">Edukasi</a>
+                        <a className='px-4' href="#">Home</a>
+                        <a className='px-4' href="#">Berita</a>
+                        <a className='px-4' href="#">Data</a>
+                        <a className='px-4' href="#">Edukasi</a>
                         <button className="bg-blue-500 px-4 py-2 rounded-lg text-white">
                             <a href="/kalkulator">Kalkulator</a>
                         </button>

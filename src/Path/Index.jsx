@@ -7,10 +7,12 @@ import Dampak from "../Pages/Dampak";
 import Solusi from "../Pages/Solusi";
 import VisualisasiKalkulator from "../Pages/VisualisasiKalkulator";
 import Footer from "../Pages/Footer";
+import Gordeng from "../Pages/Gordeng";
 
 const Index = () => {
     return (
         <div>
+            <Gordeng />
             <Navbar />
             <Home />
             <Berita />
