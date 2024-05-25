@@ -1,5 +1,15 @@
 import { useState, useEffect } from "react";
-import News from '../assets/images/news.svg'
+import { Virtual, Navigation, Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+import '../Styles/style.css';
+
+import News from "../assets/images/news.svg";
 import GambarBerita from "../Components/Fragments/GambarBerita";
 import PilihDay from "../Components/Fragments/PilihDay";
 
@@ -13,11 +23,10 @@ import gambar6 from "../assets/images/gambar6.jpg";
 import gambar7 from "../assets/images/gambar7.jpg";
 import gambar8 from "../assets/images/gambar8.jpg";
 
-import gambar9 from '../assets/images/gambar9.jpg';
-import gambar10 from '../assets/images/gambar10.jpg';
-import gambar11 from '../assets/images/gambar11.jpg';
-import gambar12 from '../assets/images/gambar12.jpg';
-
+import gambar9 from "../assets/images/gambar9.jpg";
+import gambar10 from "../assets/images/gambar10.jpg";
+import gambar11 from "../assets/images/gambar11.jpg";
+import gambar12 from "../assets/images/gambar12.jpg";
 import YoutubeSlide from "../Components/Fragments/YoutubeSlide";
 
 const Berita = () => {
@@ -34,9 +43,9 @@ const Berita = () => {
         <div className="mb-14 lg:px-28 lg:mb-36">
             <div className="px-10 mb-5 lg:px-0 lg:mb-10">
                 <div className="flex justify-center items-center py-2 text-lg lg:justify-around">
-                    <PilihDay text="Harian" onClick={() => optionDay("harian")} border={day === 'harian' ? 'border-[#27B869] text-[#27B869]' : 'border-[#D1D1D6] text-[#D1D1D6]'}/>
-                    <PilihDay text="Mingguan" onClick={() => optionDay("mingguan")} border={day === 'mingguan' ? 'border-[#27B869] text-[#27B869]' : 'border-[#D1D1D6] text-[#D1D1D6]'} />
-                    <PilihDay text="Bulanan" onClick={() => optionDay("bulanan")} border={day === 'bulanan' ? 'border-[#27B869] text-[#27B869]' : 'border-[#D1D1D6] text-[#D1D1D6]'}/>
+                    <PilihDay text="Harian" onClick={() => optionDay("harian")} border={day === "harian" ? "border-[#27B869] text-[#27B869]" : "border-[#D1D1D6] text-[#D1D1D6]"} />
+                    <PilihDay text="Mingguan" onClick={() => optionDay("mingguan")} border={day === "mingguan" ? "border-[#27B869] text-[#27B869]" : "border-[#D1D1D6] text-[#D1D1D6]"} />
+                    <PilihDay text="Bulanan" onClick={() => optionDay("bulanan")} border={day === "bulanan" ? "border-[#27B869] text-[#27B869]" : "border-[#D1D1D6] text-[#D1D1D6]"} />
                 </div>
             </div>
             <div className="flex justify-center px-7 mb-5 lg:px-0">
@@ -66,8 +75,50 @@ const Berita = () => {
                     <GambarBerita image={gambar12} text="Studi: Perubahan Iklim Bis..." />
                 </div>
             )}
-            <div className="bg-hijau">
-                <YoutubeSlide/>
+            <div className="bg-hijau mt-10 py-8">
+                <Swiper
+                    modules={[Virtual, Navigation, Pagination]}
+                    slidesPerView={3}
+                    navigation={true}
+                    virtual
+                >
+                    <SwiperSlide>
+                        <YoutubeSlide image={gambar12}/>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <YoutubeSlide image={gambar11}/>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <YoutubeSlide image={gambar10}/>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <YoutubeSlide image={gambar9}/>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <YoutubeSlide image={gambar8}/>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <YoutubeSlide image={gambar7}/>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <YoutubeSlide image={gambar6}/>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <YoutubeSlide image={gambar5}/>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <YoutubeSlide image={gambar4}/>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <YoutubeSlide image={gambar3}/>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <YoutubeSlide image={gambar2}/>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <YoutubeSlide image={gambar}/>
+                    </SwiperSlide>
+                </Swiper>
             </div>
         </div>
     );

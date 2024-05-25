@@ -100,7 +100,7 @@ const Kalkulator = () => {
                         <OptionsKalkulator image={Mobil} onClick={() => pickTipeKendaraan("Mobil")} bg={tipeKendaraan === "Mobil" ? "bg-[#57AE09]" : "bg-hijau"} />
                     </div>
                     <div>
-                        <input type="text" className="bg-transparent border-4 border-white rounded-xl px-2 py-2 contrast-more:border-slate-400 lg:px-4" value={jarak} onChange={handleJarakChange} />
+                        <input type="text" className="bg-transparent border-4 border-white rounded-xl px-2 py-2 w-56 contrast-more:border-slate-400 lg:px-4" value={jarak} onChange={handleJarakChange} />
                         <p className="text-center mt-2 text-white">Jarak Tempuh (km)</p>
                     </div>
                 </div>

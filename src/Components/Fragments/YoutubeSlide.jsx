@@ -1,37 +1,14 @@
-import { useRef, useState } from 'react';
-import { Virtual, Navigation, Pagination } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import Play from "../../assets/vektor/play.svg";
 
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+const YoutubeSlide = ({ image }) => {
+    return (
+        <a href="">
+            <div className="relative flex justify-center items-center">
+                <img className="absolute z-10 lg:w-[60px]" src={Play} alt="" />
+                <img className="w-[200px] h-[110px] lg:w-[280px] lg:h-[230px] shadow" src={image} alt="" />
+            </div>
+        </a>
+    );
+};
 
-import '../../Styles/style.css';
-
-const YoutubeSlide = () => {
-  return (
-    <>
-      <Swiper
-        modules={[Virtual, Navigation, Pagination]}
-        slidesPerView={3}
-        centeredSlides={true}
-        spaceBetween={30}
-        pagination={{
-          type: 'fraction',
-        }}
-        navigation={true}
-        virtual
-      >
-          <SwiperSlide >
-            <h1>Hello World</h1>
-          </SwiperSlide>
-          <SwiperSlide >
-            <h1>Hello World</h1>
-          </SwiperSlide>
-      </Swiper>
-    </>
-  );
-}
-
-export default YoutubeSlide
+export default YoutubeSlide;
