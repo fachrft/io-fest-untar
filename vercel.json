@@ -1,7 +1,4 @@
 {
     "version": 2,
-    "routes": [
-        { "src": "/", "dest": "/" },
-        { "src": "/kalkulator", "dest": "/kalkulator" }
-    ]
+    "routes": [{ "src": "/(.*)", "dest": "/" }]
 }
