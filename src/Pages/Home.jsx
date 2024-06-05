@@ -3,7 +3,7 @@ import Icon from "../assets/icon/Icon.svg";
 
 const Home = () => {
     return (
-        <div className="flex flex-col gap-10 mb-14">
+        <div className="flex flex-col gap-10 mb-14" id="home">
             <Globe />
             <div className="flex flex-col px-7 gap-4 lg:px-32">
                 <h1 className="text-xl font-semibold pr-10 lg:text-[40px] lg:leading-tight lg:w-[50vw]">Apa Yang Di Maksud Dengan Emisi Karbon ?</h1>

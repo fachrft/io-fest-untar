@@ -21,7 +21,7 @@ import "../../Styles/style.css";
 
 const SwiperCardsSolusi = () => {
     return (
-        <div className="w-[300px] lg:w-[25vw]">
+        <div className="w-[300px] lg:w-[25vw]" data-aos="fade-left">
             <Swiper effect={"cards"} grabCursor={true} modules={[EffectCards]} loop={true} className="mySwiper">
                 <div className="swiper-wrapper">
                     <SwiperSlide className="text-black flex justify-center items-center rounded-lg ">

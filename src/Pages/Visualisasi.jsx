@@ -16,7 +16,7 @@ const Visualisasi = () => {
         setSelectedDiagram(option)
     }
     return (
-        <div className="mb-14 lg:px-28 lg:mb-36">
+        <div className="mb-14 lg:px-28 lg:mb-36" id="data">
             <div className="px-7 pr-20 lg:px-0">
                 <h1 className="font-semibold text-xl lg:text-[40px] lg:leading-tight lg:w-[500px]">Presentase Data Dalam Bentuk Diagram</h1>
             </div>

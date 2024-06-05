@@ -15,9 +15,31 @@ const Footer = () => {
                     <h1 className="lg:text-2xl">Jl. Balai Pustaka Baru I No.2, RT.2/RW.7, Rawamangun, Kec. Pulo Gadung, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13220</h1>
                 </div>
                 <div className="flex px-6 gap-2.5 mb-7 lg:justify-between lg:mb-20">
-                    <IsiFooter judul_isi="LAMAN SITUS" isi1="Beranda" isi2="Berita" isi3="Data" isi4="Edukasi" isi5="Kalkulator" />
+                    <IsiFooter 
+                    judul_isi="LAMAN SITUS" 
+                    isi1="Beranda" 
+                    link1="/#home"
+                    isi2="Berita" 
+                    link2="/#berita"
+                    isi3="Data"
+                    link3="/#data"
+                    isi4="Edukasi"
+                    link4="/#edukasi"
+                    isi5="Kalkulator"
+                    link5="/kalkulator" />
                     <span className="bg-white w-[0.8px]"></span>
-                    <IsiFooter judul_isi="SUMBER DATA" />
+                    <IsiFooter judul_isi="SUMBER DATA"
+                    isi1="Sektor Energi"
+                    link1="https://signsmart.menlhk.go.id/v2.1/app/chart/emisi_energy_p"
+                    isi2="Sektor IPPU"
+                    link2="https://signsmart.menlhk.go.id/v2.1/app/chart/emisi_ippu_p"
+                    isi3="Sektor Pertanian"
+                    link3="https://signsmart.menlhk.go.id/v2.1/app/chart/emisi_agriculture_p"
+                    isi4="Sektor Kehutanan"
+                    link4="https://signsmart.menlhk.go.id/v2.1/app/chart/emisi_forestry_p"
+                    isi5="Sektor Limbah"
+                    link5="https://signsmart.menlhk.go.id/v2.1/app/chart/emisi_waste_p"
+                    />
                     <span className="bg-white w-[0.8px]"></span>
                     <IsiFooter judul_isi="CREDIT" isi1="Freepik" />
                 </div>

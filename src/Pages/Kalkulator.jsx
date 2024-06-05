@@ -6,6 +6,7 @@ import Listrik from "../assets/icon/listrik.svg";
 import Solar from "../assets/icon/solar.svg";
 import OptionsKalkulator from "../Components/Fragments/OptionsKalkulator";
 import Swal from "sweetalert2";
+import Logo from "../assets/logo/logo.png";
 import { useState } from "react";
 
 const Kalkulator = () => {
@@ -13,6 +14,7 @@ const Kalkulator = () => {
     const [bahanBakar, setBahanBakar] = useState("");
     const [jarak, setJarak] = useState("");
     const [totalEmisi, setTotalEmisi] = useState("");
+    const [popUpHasil, setPopUpHasil] = useState(false);
 
     const handleJarakChange = (e) => {
         const newValue = e.target.value.replace(",", ".");
@@ -23,8 +25,7 @@ const Kalkulator = () => {
         Swal.fire({
             icon: "error",
             title: "Gagal Menghitung",
-            text: "KSLAJDWPQWOJQDJADJASDKNFLDKLANF",
-            footer: '<a href="#">Why do I have this issue?</a>',
+            text: "Terjadi Kesalahan",
         });
     }
 
@@ -35,6 +36,14 @@ const Kalkulator = () => {
     const pickBahanBakar = (type) => {
         setBahanBakar(type);
     };
+
+    const handlePopUpHasil = () => {
+        setPopUpHasil(true);
+    };
+
+    const selesai = () => {
+        setPopUpHasil(false)
+    }
 
     const kalkulasi = (input, konsumsiPerLiter, emisi) => {
         let konsumsi = 0;
@@ -49,40 +58,45 @@ const Kalkulator = () => {
     const SubmitKalkulasi = () => {
         if (tipeKendaraan === "Mobil") {
             if (bahanBakar === "Bensin") {
+                handlePopUpHasil()
                 kalkulasi(jarak, 0.051, 2.65);
             }
             if (bahanBakar === "Solar") {
+                handlePopUpHasil()
                 kalkulasi(jarak, 0.0405, 2.4);
             }
             if (bahanBakar === "Listrik") {
+                handlePopUpHasil()
                 kalkulasi(jarak, 0.1176, 1.07);
             }
         }
         if (tipeKendaraan === "Motor") {
             if (bahanBakar === "Bensin") {
+                handlePopUpHasil()
                 kalkulasi(jarak, 0.0192, 2.4);
             }
             if (bahanBakar === "Listrik") {
+                handlePopUpHasil()
                 kalkulasi(jarak, 0.025, 0.85);
             }
             if (bahanBakar === "Solar") {
-                error()
+                error();
             }
         }
         if (tipeKendaraan === "Bus") {
             if (bahanBakar === "Solar") {
+                handlePopUpHasil()
                 kalkulasi(jarak, 0.333, 2.4);
             }
             if (bahanBakar === "Listrik") {
+                handlePopUpHasil()
                 kalkulasi(jarak, 1, 1.07);
             }
-            if(bahanBakar === "Bensin") {
-                error()
+            if (bahanBakar === "Bensin") {
+                error();
             }
         }
     };
-
-    
 
     return (
         <div className="pt-24 mb-20 lg:px-28 lg:mb-20">
@@ -132,6 +146,20 @@ const Kalkulator = () => {
                     </div>
                 </div>
             </div>
+            {popUpHasil && (
+                <div className="h-screen w-full fixed left-0 top-0 flex justify-center items-center bg-black bg-opacity-50 overflow-y-hidden max-w-[100vw]">
+                    <div className="w-[314px] h-[337px] lg:w-[364px] lg:h-[407px] rounded-xl flex flex-col  px-5 py-2 items-center relative bg-white">
+                        <div>
+                            <img className="w-[180px] lg:w-[240px]" src={Logo} alt="" />
+                        </div>
+                        <div className="flex flex-col gap-2 mb-10 lg:mb-14">
+                            <p className="px-3 text-lg text-center">Karbon Yang Anda keluarkan Sebesar : </p>
+                            <p className="text-xl font-semibold text-center">{totalEmisi}</p>
+                        </div>
+                        <button onClick={() => selesai()} className="bg-biru rounded-xl px-20 py-2 text-white hover:bg-white hover:text-black transition-all duration-700 font-semibold close">OK</button>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };

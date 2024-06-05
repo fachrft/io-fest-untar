@@ -23,7 +23,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <header className={`fixed w-full z-50 ${isScrolled ? 'bg-white bg-opacity-70 backdrop-blur' : 'bg-transparent'}`}>
+        <header className={`fixed w-full z-50 ${isScrolled ? 'bg-white bg-opacity-70 backdrop-blur' : 'bg-transparent'} ${isMenuOpen ? 'pb-6' : 'pb-0'} `}>
             <div className="px-4 lg:px-24">
                 <div className="flex items-center justify-between">
                     <div>
@@ -36,24 +36,24 @@ const Navbar = () => {
                             </svg>
                         </button>
                     </div>
-                    <nav className={`lg:flex justify-center items-center gap-6 text-lg font-semibold hidden`}>
-                        <a href="#">Home</a>
-                        <a href="#">Berita</a>
-                        <a href="#">Data</a>
-                        <a href="#">Edukasi</a>
+                    <nav className={`lg:flex justify-center items-center gap-8 text-xl font-medium hidden`}>
+                        <a className="nav-link hover:text-[#486FFA]" href="/#home">Home</a>
+                        <a className="nav-link hover:text-[#486FFA]" href="/#berita">Berita</a>
+                        <a className="nav-link hover:text-[#486FFA]" href="/#data">Data</a>
+                        <a className="nav-link hover:text-[#486FFA]" href="/#edukasi">Edukasi</a>
                         <button className="bg-blue-500 px-4 py-2 rounded-lg text-white">
                             <a href="/kalkulator">Kalkulator</a>
                         </button>
                     </nav>
                 </div>
-                <div className={`mobile-menu ${isMenuOpen ? 'flex' : 'hidden'} lg:hidden pb-4`}>
+                <div className={`mobile-menu ${isMenuOpen ? 'flex' : 'hidden'} lg:hidden pb-4 bg-white py-4 px-5 rounded-lg`}>
                     <nav className="flex flex-col gap-4">
-                        <a className='px-4' href="#">Home</a>
-                        <a className='px-4' href="#">Berita</a>
-                        <a className='px-4' href="#">Data</a>
-                        <a className='px-4' href="#">Edukasi</a>
-                        <button className="bg-blue-500 px-4 py-2 rounded-lg text-white">
-                            <a href="/kalkulator">Kalkulator</a>
+                        <a className="nav-link" href="/#home">Home</a>
+                        <a className="nav-link" href="/#berita">Berita</a>
+                        <a className="nav-link" href="/#data">Data</a>
+                        <a className="nav-link" href="/#edukasi">Edukasi</a>
+                        <button className="bg-blue-500 py-2 rounded-lg text-white">
+                            <a href="/kalkulator" className='px-5'>Kalkulator</a>
                         </button>
                     </nav>
                 </div>

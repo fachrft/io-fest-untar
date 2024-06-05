@@ -1,6 +1,6 @@
 import Handphone from "../assets/vektor/handphone.png";
 import FiturKalkulatorEmisi from "../Components/Fragments/FiturKalkulatorEmisi";
-import Icon from '../assets/icon/Icon.svg'
+import Icon from "../assets/icon/Icon.svg";
 
 const VisualisasiKalkulator = () => {
     return (
@@ -21,14 +21,16 @@ const VisualisasiKalkulator = () => {
                     <FiturKalkulatorEmisi text="Integrasi Sosial" />
                 </div>
             </div>
-            <div className="flex gap-2 items-center lg:gap-6 px-10">
-                <div className="bg-biru w-8 flex justify-center items-center h-8 rounded-full lg:w-16 lg:h-16">
-                    <img className="w-3 lg:w-4" src={Icon} alt="" />
+            <a href="/kalkulator">
+                <div className="flex gap-2 items-center lg:gap-6 px-10">
+                    <div className="bg-biru w-8 flex justify-center items-center h-8 rounded-full lg:w-16 lg:h-16">
+                        <img className="w-3 lg:w-4" src={Icon} alt="" />
+                    </div>
+                    <div>
+                        <h1 className="text-biru font-semibold text-xl lg:text-3xl">Ayo Hitung Emisimu!</h1>
+                    </div>
                 </div>
-                <div>
-                    <h1 className="text-biru font-semibold text-xl lg:text-3xl">Ayo Hitung Emisimu!</h1>
-                </div>
-            </div>
+            </a>
         </div>
     );
 };

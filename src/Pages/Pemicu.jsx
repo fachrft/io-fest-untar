@@ -23,7 +23,7 @@ const Pemicu = () => {
 
 
     return (
-        <div className="h-[75vh] mb-14 overflow-hidden lg:h-[130vh]">  
+        <div className="h-[75vh] mb-14 overflow-hidden lg:h-[130vh]" id="edukasi">  
             <div>
                 <img ref={ref} className="scale-[2]" src={Rumput} alt="" />
             </div>

@@ -27,7 +27,7 @@ export const isiCard = [
         id: 4,
         image: Sampah,
         desc: `Perubahan Iklim :
-        Memicu perubahan cuaca global, dari pola hujan hingga suhu `
+        Memicu perubahan cuaca global, dari pola hujan hingga suhu ekstrem`
     },
     {
         id: 5,
