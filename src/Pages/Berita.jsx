@@ -75,7 +75,7 @@ const Berita = () => {
                     <GambarBerita link="https://www.cnbcindonesia.com/news/20221114152955-4-387762/top-emisi-karbon-energi-ri-ditekan-hingga-358-juta-ton-co2" image={gambar12} text="Top Emisi Karbon" />
                 </div>
             )}
-            <div className="bg-hijau mt-10 py-8 px-10">
+            <div className="bg-hijau mt-10 py-8 lg:px-10">
                 <Swiper
                     modules={[Virtual, Navigation, Pagination]}
                     slidesPerView={3}
