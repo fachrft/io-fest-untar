@@ -15,7 +15,7 @@ export const isiCard = [
     {
         id: 2,
         image: Batuk,
-        desc: `Menyebabkan ASMA : Menimbulklan penyakit paru-obstruktif kronis & infeksi pernapasan`
+        desc: `Menyebabkan ASMA : Menimbulkan penyakit paru-obstruktif kronis & infeksi pernapasan`
     },
     {
         id: 3,

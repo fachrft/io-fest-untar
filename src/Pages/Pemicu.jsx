@@ -45,7 +45,7 @@ const Pemicu = () => {
 
                     {selectedOption === "Pabrik" && (
                         <IsiOptionsPemicu
-                            judul="Kegitan Industri"
+                            judul="Kegiatan Industri"
                             isi="Proses produksi industri seperti produksi semen, baja, dan kimia menggunakan energi fosil dan menyebabkan emisi karbon."
                         />
                     )}

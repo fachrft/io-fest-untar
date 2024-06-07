@@ -65,7 +65,7 @@ const SwiperCardsSolusi = () => {
                                 <img className="lg:w-[90px]" src={FastFood} alt="" />
                             </div>
                             <div>
-                                <p className="text-sm font-normal lg:text-lg">Contoh = Konsumsi produk lokal dan organik Fungsi = Turunkan emisi transportasi, dukung pertanian ramah lingkunga</p>
+                                <p className="text-sm font-normal lg:text-lg">Contoh = Konsumsi produk lokal dan organik Fungsi = Turunkan emisi transportasi, dukung pertanian ramah lingkungan</p>
                             </div>
                         </div>
                     </SwiperSlide>
