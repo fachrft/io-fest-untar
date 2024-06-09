@@ -52,7 +52,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="bg-[#57AE09] h-20 flex justify-center items-center">
-                <h1 className="text-xl font-semibold text-white">Copyright 2024 TEAM</h1>
+                <h1 className="text-xl font-semibold text-white">Copyright 2024 ZeroCardn</h1>
             </div>
         </footer>
     );
