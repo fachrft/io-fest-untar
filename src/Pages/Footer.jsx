@@ -31,7 +31,16 @@ const Footer = () => {
                         link5="https://signsmart.menlhk.go.id/v2.1/app/chart/emisi_waste_p"
                     />
                     <span className="bg-white w-[0.8px]"></span>
-                    <IsiFooter judul_isi="CREDIT" isi1="Freepik" />
+                    <IsiFooter judul_isi="CREDIT" 
+                    isi1="Freepik"
+                    link1="https://www.freepik.com/"
+                    isi2="Kompas"
+                    link2="https://www.kompas.com/"
+                    isi3="Cnn Indonesia"
+                    link3="https://www.cnnindonesia.com/"
+                    isi4="Liputan 6"
+                    link4="https://www.liputan6.com/"
+                    />
                 </div>
                 <div className="px-6 mb-2 flex flex-col lg:gap-2">
                     <h1 className="text-[17px] font-bold lg:text-2xl">RESPONDEN</h1>
