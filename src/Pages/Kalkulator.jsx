@@ -42,8 +42,8 @@ const Kalkulator = () => {
     };
 
     const selesai = () => {
-        setPopUpHasil(false)
-    }
+        setPopUpHasil(false);
+    };
 
     const kalkulasi = (input, konsumsiPerLiter, emisi) => {
         let konsumsi = 0;
@@ -58,25 +58,25 @@ const Kalkulator = () => {
     const SubmitKalkulasi = () => {
         if (tipeKendaraan === "Mobil") {
             if (bahanBakar === "Bensin") {
-                handlePopUpHasil()
+                handlePopUpHasil();
                 kalkulasi(jarak, 0.051, 2.65);
             }
             if (bahanBakar === "Solar") {
-                handlePopUpHasil()
+                handlePopUpHasil();
                 kalkulasi(jarak, 0.0405, 2.4);
             }
             if (bahanBakar === "Listrik") {
-                handlePopUpHasil()
+                handlePopUpHasil();
                 kalkulasi(jarak, 0.1176, 1.07);
             }
         }
         if (tipeKendaraan === "Motor") {
             if (bahanBakar === "Bensin") {
-                handlePopUpHasil()
+                handlePopUpHasil();
                 kalkulasi(jarak, 0.0192, 2.4);
             }
             if (bahanBakar === "Listrik") {
-                handlePopUpHasil()
+                handlePopUpHasil();
                 kalkulasi(jarak, 0.025, 0.85);
             }
             if (bahanBakar === "Solar") {
@@ -85,11 +85,11 @@ const Kalkulator = () => {
         }
         if (tipeKendaraan === "Bus") {
             if (bahanBakar === "Solar") {
-                handlePopUpHasil()
+                handlePopUpHasil();
                 kalkulasi(jarak, 0.333, 2.4);
             }
             if (bahanBakar === "Listrik") {
-                handlePopUpHasil()
+                handlePopUpHasil();
                 kalkulasi(jarak, 1, 1.07);
             }
             if (bahanBakar === "Bensin") {
@@ -114,7 +114,16 @@ const Kalkulator = () => {
                         <OptionsKalkulator image={Mobil} onClick={() => pickTipeKendaraan("Mobil")} bg={tipeKendaraan === "Mobil" ? "bg-[#57AE09]" : "bg-hijau"} />
                     </div>
                     <div>
-                        <input type="text" className="bg-transparent border-4 border-white rounded-xl px-2 py-2 w-56 contrast-more:border-slate-400 lg:px-4" value={jarak} onChange={handleJarakChange} />
+                        <input
+                            type="number"
+                            className="bg-transparent border-4 border-white rounded-xl px-2 py-2 w-56 contrast-more:border-slate-400 lg:px-4"
+                            value={jarak}
+                            onChange={handleJarakChange}
+                            style={{
+                                WebkitAppearance: "none",
+                                MozAppearance: "textfield",
+                            }}
+                        />
                         <p className="text-center mt-2 text-white">Jarak Tempuh (km)</p>
                     </div>
                 </div>
@@ -156,7 +165,9 @@ const Kalkulator = () => {
                             <p className="px-3 text-lg text-center">Karbon Yang Anda keluarkan Sebesar : </p>
                             <p className="text-xl font-semibold text-center">{totalEmisi}</p>
                         </div>
-                        <button onClick={() => selesai()} className="bg-biru rounded-xl px-20 py-2 text-white hover:bg-white hover:text-black transition-all duration-700 font-semibold close">OK</button>
+                        <button onClick={() => selesai()} className="bg-biru rounded-xl px-20 py-2 text-white hover:bg-white hover:text-black transition-all duration-700 font-semibold close">
+                            OK
+                        </button>
                     </div>
                 </div>
             )}
