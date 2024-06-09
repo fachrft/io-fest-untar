@@ -6,7 +6,7 @@
 
 body {
     font-family: "Poppins";
-    /* overflow-y: hidden; */
+    overflow-y: hidden;
 }
 
 ::-webkit-scrollbar {
