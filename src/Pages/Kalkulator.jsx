@@ -109,9 +109,9 @@ const Kalkulator = () => {
                         <h1 className="text-white font-semibold lg:text-xl">Jenis Kendaraan</h1>
                     </div>
                     <div className="bg-white w-[75vw] flex gap-3 justify-center px-4 py-4 rounded-lg lg:w-[45vw] lg:gap-7">
-                        <OptionsKalkulator image={Bus} onClick={() => pickTipeKendaraan("Bus")} bg={tipeKendaraan === "Bus" ? "bg-[#57AE09]" : "bg-hijau"} />
-                        <OptionsKalkulator image={Motor} onClick={() => pickTipeKendaraan("Motor")} bg={tipeKendaraan === "Motor" ? "bg-[#57AE09]" : "bg-hijau"} />
-                        <OptionsKalkulator image={Mobil} onClick={() => pickTipeKendaraan("Mobil")} bg={tipeKendaraan === "Mobil" ? "bg-[#57AE09]" : "bg-hijau"} />
+                        <OptionsKalkulator image={Bus} isi="Bus" onClick={() => pickTipeKendaraan("Bus")} bg={tipeKendaraan === "Bus" ? "bg-[#57AE09]" : "bg-hijau"} />
+                        <OptionsKalkulator image={Motor} isi="Motor" onClick={() => pickTipeKendaraan("Motor")} bg={tipeKendaraan === "Motor" ? "bg-[#57AE09]" : "bg-hijau"} />
+                        <OptionsKalkulator image={Mobil} isi="Mobil" onClick={() => pickTipeKendaraan("Mobil")} bg={tipeKendaraan === "Mobil" ? "bg-[#57AE09]" : "bg-hijau"} />
                     </div>
                     <div>
                         <input
@@ -135,9 +135,9 @@ const Kalkulator = () => {
             </div>
             <div>
                 <div className="flex justify-center items-center gap-5 pt-10">
-                    <OptionsKalkulator image={Pom} onClick={() => pickBahanBakar("Bensin")} bg={bahanBakar === "Bensin" ? "bg-[#57AE09]" : "bg-hijau"} />
-                    <OptionsKalkulator image={Listrik} onClick={() => pickBahanBakar("Listrik")} bg={bahanBakar === "Listrik" ? "bg-[#57AE09]" : "bg-hijau"} />
-                    <OptionsKalkulator image={Solar} onClick={() => pickBahanBakar("Solar")} bg={bahanBakar === "Solar" ? "bg-[#57AE09]" : "bg-hijau"} />
+                    <OptionsKalkulator image={Pom} isi="Bensin" onClick={() => pickBahanBakar("Bensin")} bg={bahanBakar === "Bensin" ? "bg-[#57AE09]" : "bg-hijau"} />
+                    <OptionsKalkulator image={Listrik} isi="Listrik" onClick={() => pickBahanBakar("Listrik")} bg={bahanBakar === "Listrik" ? "bg-[#57AE09]" : "bg-hijau"} />
+                    <OptionsKalkulator image={Solar} isi="Solar" onClick={() => pickBahanBakar("Solar")} bg={bahanBakar === "Solar" ? "bg-[#57AE09]" : "bg-hijau"} />
                 </div>
             </div>
             <div className="flex justify-center pt-10">
